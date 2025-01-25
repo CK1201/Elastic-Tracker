@@ -31,7 +31,7 @@ static void backwardT(const Eigen::Ref<const Eigen::VectorXd>& vecT, Eigen::Ref<
   int M = t.size();
   t = vecT.head(M) / vecT(M);
   for (int i = 0; i < M; ++i) {
-    t(i) = logC2(vecT(i));
+    t(i) = logC2(t(i));
   }
   return;
 }
